@@ -1,0 +1,43 @@
+{
+  "name": "wetaca-mcp",
+  "version": "0.1.0",
+  "description": "Servidor MCP para gestionar Wetaca desde Claude Desktop, Cursor y otros clientes, usando wetaca-cli.",
+  "type": "module",
+  "bin": {
+    "wetaca-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "pretest": "npm run build",
+    "test": "node --test --test-timeout 30000 test/*.test.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "wetaca",
+    "mcp",
+    "model-context-protocol",
+    "wetaca-cli",
+    "claude",
+    "cursor"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/server": "^2.4.0",
+    "wetaca-cli": "0.2.6",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@modelcontextprotocol/client": "^2.4.0",
+    "@types/node": "^22.20.5",
+    "typescript": "^5.9.3"
+  }
+}

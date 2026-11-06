@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "wetaca": {
+      "command": "node",
+      "args": ["/RUTA/ABSOLUTA/al/repo/dist/index.js"]
+    }
+  }
+}
